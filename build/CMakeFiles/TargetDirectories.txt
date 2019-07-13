@@ -1,0 +1,8 @@
+/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles/rebuild_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles/edit_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/rebuild_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/edit_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/fact.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/rebuild_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/edit_cache.dir
+/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/test.dir
