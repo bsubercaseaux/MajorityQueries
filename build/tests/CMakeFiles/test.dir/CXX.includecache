@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../include/factorial.hpp
+../include/bitmap.h
+vector
+-
 
-/Users/bernardo/dev/projects/MajorityQueries/tests/test_factorial.cpp
+/Users/bernardo/dev/projects/MajorityQueries/tests/test_bitmap.cpp
+vector
+-
 catch2/catch.hpp
 /Users/bernardo/dev/projects/MajorityQueries/tests/catch2/catch.hpp
-factorial.hpp
-/Users/bernardo/dev/projects/MajorityQueries/tests/factorial.hpp
+bitmap.h
+/Users/bernardo/dev/projects/MajorityQueries/tests/bitmap.h
+
+/Users/bernardo/dev/projects/MajorityQueries/tests/test_main.cpp
+catch2/catch.hpp
+/Users/bernardo/dev/projects/MajorityQueries/tests/catch2/catch.hpp
 
 /usr/local/include/catch2/catch.hpp
 TargetConditionals.h

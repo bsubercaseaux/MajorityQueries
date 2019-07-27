@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fact
+# Target rules for targets named bitmap
 
 # Build rule for target.
-fact: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fact
-.PHONY : fact
+bitmap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bitmap
+.PHONY : bitmap
 
 # fast build rule for target.
-fact/fast:
-	$(MAKE) -f src/CMakeFiles/fact.dir/build.make src/CMakeFiles/fact.dir/build
-.PHONY : fact/fast
+bitmap/fast:
+	$(MAKE) -f src/CMakeFiles/bitmap.dir/build.make src/CMakeFiles/bitmap.dir/build
+.PHONY : bitmap/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -144,7 +144,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fact"
+	@echo "... bitmap"
 	@echo "... test"
 .PHONY : help
 

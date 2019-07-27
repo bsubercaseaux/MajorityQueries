@@ -1,1 +1,1 @@
-add_library(fact factorial.cpp)
+add_library(bitmap bitmap.cpp)

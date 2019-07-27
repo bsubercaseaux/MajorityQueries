@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/bitmap.h
+vector
+-
+
+/Users/bernardo/dev/projects/MajorityQueries/src/bitmap.cpp
+vector
+-
+bitmap.h
+/Users/bernardo/dev/projects/MajorityQueries/src/bitmap.h
+

@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bernardo/dev/projects/MajorityQueries/tests/test_factorial.cpp" "/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/test.dir/test_factorial.cpp.o"
+  "/Users/bernardo/dev/projects/MajorityQueries/tests/test_bitmap.cpp" "/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/test.dir/test_bitmap.cpp.o"
+  "/Users/bernardo/dev/projects/MajorityQueries/tests/test_main.cpp" "/Users/bernardo/dev/projects/MajorityQueries/build/tests/CMakeFiles/test.dir/test_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -16,6 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/bitmap.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

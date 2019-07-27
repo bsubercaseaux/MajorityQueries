@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/fact.dir/rule:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fact.dir/rule
-.PHONY : src/CMakeFiles/fact.dir/rule
+src/CMakeFiles/bitmap.dir/rule:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/bitmap.dir/rule
+.PHONY : src/CMakeFiles/bitmap.dir/rule
 
 # Convenience name for target.
-fact: src/CMakeFiles/fact.dir/rule
+bitmap: src/CMakeFiles/bitmap.dir/rule
 
-.PHONY : fact
+.PHONY : bitmap
 
 # fast build rule for target.
-fact/fast:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/fact.dir/build.make src/CMakeFiles/fact.dir/build
-.PHONY : fact/fast
+bitmap/fast:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/bitmap.dir/build.make src/CMakeFiles/bitmap.dir/build
+.PHONY : bitmap/fast
 
-factorial.o: factorial.cpp.o
+bitmap.o: bitmap.cpp.o
 
-.PHONY : factorial.o
+.PHONY : bitmap.o
 
 # target to build an object file
-factorial.cpp.o:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/fact.dir/build.make src/CMakeFiles/fact.dir/factorial.cpp.o
-.PHONY : factorial.cpp.o
+bitmap.cpp.o:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/bitmap.dir/build.make src/CMakeFiles/bitmap.dir/bitmap.cpp.o
+.PHONY : bitmap.cpp.o
 
-factorial.i: factorial.cpp.i
+bitmap.i: bitmap.cpp.i
 
-.PHONY : factorial.i
+.PHONY : bitmap.i
 
 # target to preprocess a source file
-factorial.cpp.i:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/fact.dir/build.make src/CMakeFiles/fact.dir/factorial.cpp.i
-.PHONY : factorial.cpp.i
+bitmap.cpp.i:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/bitmap.dir/build.make src/CMakeFiles/bitmap.dir/bitmap.cpp.i
+.PHONY : bitmap.cpp.i
 
-factorial.s: factorial.cpp.s
+bitmap.s: bitmap.cpp.s
 
-.PHONY : factorial.s
+.PHONY : bitmap.s
 
 # target to generate assembly for a file
-factorial.cpp.s:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/fact.dir/build.make src/CMakeFiles/fact.dir/factorial.cpp.s
-.PHONY : factorial.cpp.s
+bitmap.cpp.s:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f src/CMakeFiles/bitmap.dir/build.make src/CMakeFiles/bitmap.dir/bitmap.cpp.s
+.PHONY : bitmap.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fact"
-	@echo "... factorial.o"
-	@echo "... factorial.i"
-	@echo "... factorial.s"
+	@echo "... bitmap"
+	@echo "... bitmap.o"
+	@echo "... bitmap.i"
+	@echo "... bitmap.s"
 .PHONY : help
 
 

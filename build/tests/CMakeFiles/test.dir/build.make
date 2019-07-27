@@ -57,30 +57,46 @@ include tests/CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/test.dir/flags.make
 
-tests/CMakeFiles/test.dir/test_factorial.cpp.o: tests/CMakeFiles/test.dir/flags.make
-tests/CMakeFiles/test.dir/test_factorial.cpp.o: ../tests/test_factorial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/test.dir/test_factorial.cpp.o"
-	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_factorial.cpp.o -c /Users/bernardo/dev/projects/MajorityQueries/tests/test_factorial.cpp
+tests/CMakeFiles/test.dir/test_main.cpp.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_main.cpp.o: ../tests/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/test.dir/test_main.cpp.o"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_main.cpp.o -c /Users/bernardo/dev/projects/MajorityQueries/tests/test_main.cpp
 
-tests/CMakeFiles/test.dir/test_factorial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_factorial.cpp.i"
-	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bernardo/dev/projects/MajorityQueries/tests/test_factorial.cpp > CMakeFiles/test.dir/test_factorial.cpp.i
+tests/CMakeFiles/test.dir/test_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_main.cpp.i"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bernardo/dev/projects/MajorityQueries/tests/test_main.cpp > CMakeFiles/test.dir/test_main.cpp.i
 
-tests/CMakeFiles/test.dir/test_factorial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_factorial.cpp.s"
-	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bernardo/dev/projects/MajorityQueries/tests/test_factorial.cpp -o CMakeFiles/test.dir/test_factorial.cpp.s
+tests/CMakeFiles/test.dir/test_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_main.cpp.s"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bernardo/dev/projects/MajorityQueries/tests/test_main.cpp -o CMakeFiles/test.dir/test_main.cpp.s
+
+tests/CMakeFiles/test.dir/test_bitmap.cpp.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_bitmap.cpp.o: ../tests/test_bitmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/test.dir/test_bitmap.cpp.o"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_bitmap.cpp.o -c /Users/bernardo/dev/projects/MajorityQueries/tests/test_bitmap.cpp
+
+tests/CMakeFiles/test.dir/test_bitmap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_bitmap.cpp.i"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bernardo/dev/projects/MajorityQueries/tests/test_bitmap.cpp > CMakeFiles/test.dir/test_bitmap.cpp.i
+
+tests/CMakeFiles/test.dir/test_bitmap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_bitmap.cpp.s"
+	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bernardo/dev/projects/MajorityQueries/tests/test_bitmap.cpp -o CMakeFiles/test.dir/test_bitmap.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/test_factorial.cpp.o"
+"CMakeFiles/test.dir/test_main.cpp.o" \
+"CMakeFiles/test.dir/test_bitmap.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-tests/test: tests/CMakeFiles/test.dir/test_factorial.cpp.o
+tests/test: tests/CMakeFiles/test.dir/test_main.cpp.o
+tests/test: tests/CMakeFiles/test.dir/test_bitmap.cpp.o
 tests/test: tests/CMakeFiles/test.dir/build.make
+tests/test: src/libbitmap.a
 tests/test: tests/CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bernardo/dev/projects/MajorityQueries/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"
 	cd /Users/bernardo/dev/projects/MajorityQueries/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

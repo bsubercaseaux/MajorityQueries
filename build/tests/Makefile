@@ -125,32 +125,59 @@ test/fast:
 	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-test_factorial.o: test_factorial.cpp.o
+test_bitmap.o: test_bitmap.cpp.o
 
-.PHONY : test_factorial.o
+.PHONY : test_bitmap.o
 
 # target to build an object file
-test_factorial.cpp.o:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_factorial.cpp.o
-.PHONY : test_factorial.cpp.o
+test_bitmap.cpp.o:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_bitmap.cpp.o
+.PHONY : test_bitmap.cpp.o
 
-test_factorial.i: test_factorial.cpp.i
+test_bitmap.i: test_bitmap.cpp.i
 
-.PHONY : test_factorial.i
+.PHONY : test_bitmap.i
 
 # target to preprocess a source file
-test_factorial.cpp.i:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_factorial.cpp.i
-.PHONY : test_factorial.cpp.i
+test_bitmap.cpp.i:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_bitmap.cpp.i
+.PHONY : test_bitmap.cpp.i
 
-test_factorial.s: test_factorial.cpp.s
+test_bitmap.s: test_bitmap.cpp.s
 
-.PHONY : test_factorial.s
+.PHONY : test_bitmap.s
 
 # target to generate assembly for a file
-test_factorial.cpp.s:
-	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_factorial.cpp.s
-.PHONY : test_factorial.cpp.s
+test_bitmap.cpp.s:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_bitmap.cpp.s
+.PHONY : test_bitmap.cpp.s
+
+test_main.o: test_main.cpp.o
+
+.PHONY : test_main.o
+
+# target to build an object file
+test_main.cpp.o:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_main.cpp.o
+.PHONY : test_main.cpp.o
+
+test_main.i: test_main.cpp.i
+
+.PHONY : test_main.i
+
+# target to preprocess a source file
+test_main.cpp.i:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_main.cpp.i
+.PHONY : test_main.cpp.i
+
+test_main.s: test_main.cpp.s
+
+.PHONY : test_main.s
+
+# target to generate assembly for a file
+test_main.cpp.s:
+	cd /Users/bernardo/dev/projects/MajorityQueries/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_main.cpp.s
+.PHONY : test_main.cpp.s
 
 # Help Target
 help:
@@ -161,9 +188,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... test_factorial.o"
-	@echo "... test_factorial.i"
-	@echo "... test_factorial.s"
+	@echo "... test_bitmap.o"
+	@echo "... test_bitmap.i"
+	@echo "... test_bitmap.s"
+	@echo "... test_main.o"
+	@echo "... test_main.i"
+	@echo "... test_main.s"
 .PHONY : help
 
 

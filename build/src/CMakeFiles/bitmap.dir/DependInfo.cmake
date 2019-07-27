@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bernardo/dev/projects/MajorityQueries/src/factorial.cpp" "/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/fact.dir/factorial.cpp.o"
+  "/Users/bernardo/dev/projects/MajorityQueries/src/bitmap.cpp" "/Users/bernardo/dev/projects/MajorityQueries/build/src/CMakeFiles/bitmap.dir/bitmap.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
