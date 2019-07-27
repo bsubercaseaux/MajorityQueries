@@ -10,17 +10,8 @@ Bitmap<T>::Bitmap(std::shared_ptr<const std::vector<T>> initVec)
         rank0_[i+1] = rank0_[i] + (bool)vectorRef_[i];
     }
 
-    select0_.resize(rank0_[n_]);
-    select1_.resize(n_ - select0_.size());
-
-    int pos0 = 0;
-    int pos1 = 0;
     for(size_t i = 0; i < n_; ++i) {
-        if((bool)*vectorRef_[i]) {
-            select1_[pos1++] = i;
-        } else {
-            select0_[pos0++] = i;
-        }
+        select_[(bool)vectorRef_[i]].push_back(i); 
     }
 }
 
@@ -33,6 +24,6 @@ int Bitmap<T>::rank(int val, int idx) const {
 
 template<class T>
 int Bitmap<T>::select(int val, int k) const {
-    return val ? select1_[k-1] : select0_[k-1];
+    return select_[val][k-1];
 }
 

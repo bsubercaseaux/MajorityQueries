@@ -4,8 +4,7 @@ template<class T>
 class Bitmap {
     private:
         std::vector<int> rank0_;
-        std::vector<int> select0_;
-        std::vector<int> select1_;
+        std::vector<int> select_[2];
         std::shared_ptr<const std::vector<T>> vectorRef_;
         int n_;
 
