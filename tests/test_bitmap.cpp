@@ -1,5 +1,5 @@
 #include <vector>
-#include "catch.hpp"
+#include "catch2/catch.hpp"
 #include "bitmap.h"
 
 TEST_CASE( "Rank 0 gives correct results", "[rank0]" ) {
