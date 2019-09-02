@@ -1,7 +1,6 @@
 #include "bitmap.hpp"
 
-template<class T>
-Bitmap<T>::Bitmap(std::shared_ptr<const std::vector<T>> initVec) 
+Bitmap::Bitmap(std::shared_ptr<const std::vector<bool>> initVec) 
     : vectorRef_(initVec), n_((*initVec).size()) {
     rank0_.resize(n_+1);
 
@@ -14,25 +13,20 @@ Bitmap<T>::Bitmap(std::shared_ptr<const std::vector<T>> initVec)
     }
 }
 
-template<class T>
-Bitmap<T>::Bitmap(const std::vector<T>& initVec) : Bitmap(std::make_shared<const std::vector<T>>(initVec)) {}
+// Makes a copy, as we don't have guarantees on the life time of the passed vector.
+// Calling `make_shared` produces the copy and then we call the main constructor that only copies the reference
+Bitmap::Bitmap(const std::vector<bool>& initVec) : Bitmap(std::make_shared<const std::vector<bool>>(initVec)) {}
 
-template<class T>
-T Bitmap<T>::get(int i) const {
+bool Bitmap::get(int i) const {
     return (*vectorRef_)[i];
 }
 
 
-template<class T>
-int Bitmap<T>::rank(int val, int idx) const {
+int Bitmap::rank(int val, int idx) const {
     idx++; // to 1-indexing
     return val ? idx - rank0_[idx] : rank0_[idx];
 }
 
-template<class T>
-int Bitmap<T>::select(int val, int k) const {
+int Bitmap::select(int val, int k) const {
     return select_[val][k-1];
 }
-
-template class Bitmap<bool>;
-template class Bitmap<int>;

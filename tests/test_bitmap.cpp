@@ -3,8 +3,7 @@
 
 TEST_CASE( "Rank 0 gives correct results", "[rank0]" ) {
     std::vector<bool> test_vector = {1, 0, 0, 1, 1};
-    std::shared_ptr<const std::vector<bool>> vector_ptr = std::make_shared<const std::vector<bool>>(test_vector);
-    Bitmap<bool> bitmap(vector_ptr);
+    Bitmap bitmap(test_vector);
     
     REQUIRE( bitmap.rank(0, 0) == 0 );
     REQUIRE( bitmap.rank(0, 1) == 1 );
@@ -15,8 +14,7 @@ TEST_CASE( "Rank 0 gives correct results", "[rank0]" ) {
 
 TEST_CASE( "Rank 1 gives correct results", "[rank1]" ) {
     std::vector<bool> test_vector = {1, 0, 0, 1, 1};
-    std::shared_ptr<const std::vector<bool>> vector_ptr = std::make_shared<const std::vector<bool>>(test_vector);
-    Bitmap<bool> bitmap(vector_ptr);
+    Bitmap bitmap(test_vector);
     
     REQUIRE( bitmap.rank(1, 0) == 1 );
     REQUIRE( bitmap.rank(1, 1) == 1 );
@@ -27,8 +25,7 @@ TEST_CASE( "Rank 1 gives correct results", "[rank1]" ) {
 
 TEST_CASE( "Select 0 gives correct results", "[select0]" ) {
     std::vector<bool> test_vector = {1, 0, 0, 1, 1};
-    std::shared_ptr<const std::vector<bool>> vector_ptr = std::make_shared<const std::vector<bool>>(test_vector);
-    Bitmap<bool> bitmap(vector_ptr);
+    Bitmap bitmap(test_vector);
     
     REQUIRE( bitmap.select(0, 1) == 1 );
     REQUIRE( bitmap.select(0, 2) == 2 );
@@ -36,8 +33,7 @@ TEST_CASE( "Select 0 gives correct results", "[select0]" ) {
 
 TEST_CASE( "Select 1 gives correct results", "[select1]" ) {
     std::vector<bool> test_vector = {1, 0, 0, 1, 1};
-    std::shared_ptr<const std::vector<bool>> vector_ptr = std::make_shared<const std::vector<bool>>(test_vector);
-    Bitmap<bool> bitmap(vector_ptr);
+    Bitmap bitmap(test_vector);
     
     REQUIRE( bitmap.select(1, 1) == 0 );
     REQUIRE( bitmap.select(1, 2) == 3 );
