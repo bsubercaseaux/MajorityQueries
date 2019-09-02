@@ -1,10 +1,11 @@
 #include "catch2/catch.hpp"
 #include "majorities.hpp"
+#include "bitmap.hpp"
 
 TEST_CASE( "Builds A correctly", "[buildA]" ) {
     std::vector<int> test_vector = {1, 3, 2, 3, 3, 1, 1};
 
-    Maj<int> maj(test_vector, 0.5);
+    Maj<int, Bitmap> maj(test_vector, 0.5);
 
     Bitmap a_1 = maj.make_a(1);
     Bitmap a_2 = maj.make_a(2);
@@ -22,7 +23,7 @@ TEST_CASE( "Builds A correctly", "[buildA]" ) {
 TEST_CASE( "Builds M correctly", "[buildM]" ) {
     std::vector<int> test_vector = {1, 3, 2, 3, 3, 1, 1};
 
-    Maj<int> maj(test_vector, 0.5);
+    Maj<int, Bitmap> maj(test_vector, 0.5);
 
     Bitmap m_1 = maj.make_m(1);
     Bitmap m_2 = maj.make_m(2);
@@ -40,7 +41,7 @@ TEST_CASE( "Builds M correctly", "[buildM]" ) {
 TEST_CASE( "Lemma 3 binary majority queries", "[maj x]" ) {
     std::vector<int> test_vector = {1, 3, 2, 3, 3, 1, 1};
 
-    Maj<int> maj(test_vector, 0.5);
+    Maj<int, Bitmap> maj(test_vector, 0.5);
 
     
     REQUIRE( maj.isMajority(1, 0, 0, 0.5)  );

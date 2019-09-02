@@ -1,8 +1,7 @@
 #include <vector>
 #include <memory>
-#include "bitmap.hpp"
 
-template<class T>
+template<class T, class Bitmap>
 class Maj {
     public:
         Maj(std::shared_ptr<const std::vector<T>> initVec, double tau);
