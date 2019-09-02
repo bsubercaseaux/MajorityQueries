@@ -28,5 +28,8 @@ int Bitmap::rank(int val, int idx) const {
 }
 
 int Bitmap::select(int val, int k) const {
+    if(k > select_[val].size()) {
+        throw std::invalid_argument("You asked for the k-th occurence of a value, but there are fewer");
+    }
     return select_[val][k-1];
 }
