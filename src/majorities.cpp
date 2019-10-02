@@ -1,19 +1,21 @@
-#include "majorities.hpp"
-#include "bitmap.hpp"
+#include "majorities.h"
+#include "bitmap.h"
+
+#include <algorithm>
 
 // used for float comparisons for tau's
 constexpr double EPS = 1e-7;
 
-template<class T, class Bitmap>
+template<typename T, typename Bitmap>
 Maj<T, Bitmap>::Maj(std::shared_ptr<const std::vector<T>> initVec, double tau) 
     : vectorRef_(initVec), tau_(tau), n_(initVec->size()) {}
 
 // copy when a const reference is passed, to extend lifetime
-template<class T, class Bitmap>
+template<typename T, typename Bitmap>
 Maj<T, Bitmap>::Maj(const std::vector<T>& initVec, double tau) :
 Maj(std::make_shared<const std::vector<T>>(initVec), tau) {}
 
-template<class T, class Bitmap>
+template<typename T, typename Bitmap>
 Bitmap Maj<T, Bitmap>::make_a(T x) {
     std::vector<bool> a(n_);
 
@@ -34,7 +36,7 @@ Bitmap Maj<T, Bitmap>::make_a(T x) {
     return Bitmap(a);
 }
 
-template<class T, class Bitmap>
+template<typename T, typename Bitmap>
 Bitmap Maj<T, Bitmap>::make_m(T x) {
     Bitmap a_x = make_a(x);
     int ones = a_x.rank(1, n_ - 1);
@@ -49,10 +51,16 @@ Bitmap Maj<T, Bitmap>::make_m(T x) {
     return Bitmap(m);
 }
 
-template<class T, class Bitmap>
+template<typename T, typename Bitmap>
 // Uses Lemma 3, p. 8.
 bool Maj<T, Bitmap>::isMajority(T x, int i, int j, double tauPrime) {
-    assert(tauPrime >= tau_);
+    if(tauPrime < tau_) {
+        throw(std::invalid_argument("invalid tau"));
+    }
+
+    if(i < 0 || i >= n_ || j < 0 || j >= n_) {
+        throw(std::invalid_argument("invalid indices"));
+    }
 
     Bitmap a_x = make_a(x);
     int iPrime = a_x.rank(1, i);
@@ -65,7 +73,9 @@ bool Maj<T, Bitmap>::isMajority(T x, int i, int j, double tauPrime) {
     Bitmap m_x = make_m(x);
 
     // jPrime - 1 and iPrime - 2 instead of jPrime and iPrime-1 because of 0-indexing
-    return m_x.rank(1, jPrime - 1) - m_x.rank(1, iPrime - 2) > tauPrime * (jPrime - iPrime + 1);
+    int rankJ = jPrime - 1 >= 0 ? m_x.rank(1, jPrime - 1) : 0;
+    int ranjI = iPrime - 2 >= 0 ? m_x.rank(1, iPrime - 2) : 0;
+    return rankJ - ranjI > tauPrime * (jPrime - iPrime + 1);
 }
 
 
