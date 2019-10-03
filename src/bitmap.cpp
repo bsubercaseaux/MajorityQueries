@@ -18,12 +18,12 @@ int ceilDiv(int a, int b) {
 // receives the number of elements of the bitmap
 // returns an integer K meaning that we'll store information for every K consecutive entries
 int rankSamplingFactor(int n) {
-    return log2(n);
+    return std::max(1, log2(n)); // taking the maximum makes the case n = 1 work 
 }
 
 // Section 4.3.1 of the book
 int selectSamplingFactor(int n) {
-    return log2(n) * log2(n);
+    return std::max(1, log2(n) * log2(n)); // taking the maximum makes the case n = 1 work
 }
 }
 

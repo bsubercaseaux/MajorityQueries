@@ -2,6 +2,7 @@
 #include "bitmap.h"
 
 #include <algorithm>
+#include <iostream>
 
 // used for float comparisons for tau's
 constexpr double EPS = 1e-7;
@@ -39,12 +40,14 @@ Bitmap Maj<T, Bitmap>::make_a(T x) {
 template<typename T, typename Bitmap>
 Bitmap Maj<T, Bitmap>::make_m(T x) {
     Bitmap a_x = make_a(x);
+    
     int ones = a_x.rank(1, n_ - 1);
+    
     std::vector<bool> m(ones, false);
 
     for(size_t i = 0; i < n_; ++i) {
         if(a_x.get(i) == 1) {
-            m[a_x.rank(1, i) - 1] = ((*vectorRef_)[i] == x); 
+            m[a_x.rank(1, i) - 1] = (vectorRef_->at(i) == x); 
         }
     }
 
