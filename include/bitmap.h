@@ -9,12 +9,16 @@ class Bitmap {
         Bitmap(std::shared_ptr<const std::vector<bool>> initVec);
 
         Bitmap(const std::vector<bool>& initVec);
+
+        Bitmap(const std::vector<int>& initVec);
         
         bool operator==(const Bitmap& other) const {
             return (*vectorRef_) == *(other.vectorRef_);   
         }
 
         bool get(int i) const;
+
+        size_t size() const;
 
         // Returns how many vals are there in the range [0, idx]
         // val is either 0 or 1.

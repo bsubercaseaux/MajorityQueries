@@ -11,14 +11,13 @@ class Maj {
         
         // forced to copy, as we don't have guarantees on the lifetime of the object
         Maj(const std::vector<T>& initVec, double tau);
-
-        bool isMajority(T x, int i, int j, double tauPrime);
-
-        Bitmap make_a(T x);
-        Bitmap make_m(T x);
+        int findFirstMajority(int i, int j, double tauPrime);
 
     private:
         std::shared_ptr<const std::vector<T>> vectorRef_;
+
+        std::vector<Bitmap> A_;
+        std::vector<Bitmap> M_;
         double tau_;
         size_t n_;
 };

@@ -61,8 +61,14 @@ Bitmap::Bitmap(std::shared_ptr<const std::vector<bool>> initVec)
 // Calling `make_shared` produces the copy and then we call the main constructor that only copies the reference
 Bitmap::Bitmap(const std::vector<bool>& initVec) : Bitmap(std::make_shared<const std::vector<bool>>(initVec)) {}
 
+Bitmap::Bitmap(const std::vector<int>& initVec) : Bitmap(std::vector<bool>(initVec.begin(), initVec.end())) {}
+
 bool Bitmap::get(int i) const {
     return vectorRef_->at(i);
+}
+
+size_t Bitmap::size() const {
+    return vectorRef_->size();
 }
 
 int Bitmap::rank(int val, int idx) const {
