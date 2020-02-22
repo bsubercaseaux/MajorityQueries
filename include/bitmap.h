@@ -20,6 +20,8 @@ class Bitmap {
 
         size_t size() const;
 
+        int memory() const;
+
         // Returns how many vals are there in the range [0, idx]
         // val is either 0 or 1.
         int rank(int val, int idx) const;
@@ -32,5 +34,6 @@ class Bitmap {
         std::shared_ptr<const std::vector<bool>> vectorRef_;
         std::vector<int> rank0_;
         std::vector<int> select_[2]; // allows for select_[0] and select_[1]
-        int n_;
+        size_t n_;
+        int m_[2]; // number of elements of val
 };

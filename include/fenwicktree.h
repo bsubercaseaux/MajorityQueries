@@ -18,7 +18,7 @@ struct FenwickTree {
     }
 
     void update(int i, int v) {
-   	 for(;i<ft.size();i+=i&(-i)) 
+   	 for(;i<int(ft.size());i+=i&(-i)) 
          ft[i] += v;
     }
     

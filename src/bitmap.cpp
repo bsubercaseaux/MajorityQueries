@@ -23,7 +23,7 @@ int rankSamplingFactor(int n) {
 
 // Section 4.3.1 of the book
 int selectSamplingFactor(int n) {
-    return std::max(1, log2(n) * log2(n)); // taking the maximum makes the case n = 1 work
+    return std::max(2, log2(n) * log2(n)); // taking the maximum makes the case n = 1 work
 }
 }
 
@@ -53,6 +53,7 @@ Bitmap::Bitmap(std::shared_ptr<const std::vector<bool>> initVec)
                 select_[val].push_back(i);
             }
         }
+        m_[val] = selectCount;
         select_[val].push_back(n_);
     }
 }
@@ -71,9 +72,13 @@ size_t Bitmap::size() const {
     return vectorRef_->size();
 }
 
+int Bitmap::memory() const {
+    return rank0_.size() + select_[0].size() + select_[1].size();
+}
+
 int Bitmap::rank(int val, int idx) const {
-    if(idx < 0 || idx >= n_) {
-        throw std::invalid_argument("index is invalid: " + std::to_string(idx));
+    if(idx < 0 || idx >= int(n_)) {
+        throw std::invalid_argument("rank index is invalid: " + std::to_string(idx));
     }
     int b = rankSamplingFactor(n_);
     int answer = rank0_[idx / b];
@@ -89,6 +94,16 @@ int Bitmap::select(int val, int k) const {
     // we know that the answer lies between select_[val][ceil(k / s)-1] and select_[val][ceil(k / s)] -1
     int initRange = select_[val][ceilDiv(k,s) - 1];
     int endRange = select_[val][ceilDiv(k,s)] - 1;
+    if(initRange < 0 || endRange < 0 || initRange > 1e6 || endRange > 1e6) {
+        std::cout << " n = " << n_ << std::endl;
+        std::cout << "m = " << m_[0] << " " << m_[1] << std::endl;
+        std::cout << "val = " << val << " B[0] =" << get(0) << std::endl;
+        std::cout << " k = " << k << std::endl;
+        std::cout << "ceilDiv(k, s) = " << ceilDiv(k, s) << std::endl;
+        std::cout << "select_[val].size() " << select_[val].size() << std::endl;
+        std::cout << "weird: init, end" << initRange << " " << endRange << std::endl; 
+    }
+
 
     while(initRange != endRange) {
         int mid = (initRange + endRange)/2;
